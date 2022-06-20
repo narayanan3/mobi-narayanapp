@@ -1,0 +1,13 @@
+version: '3.8'
+networks: # to create a custom bridge
+  narayan111: 
+services:
+  narayanapp007:
+    image: narayanciapp:v1 
+    build: . 
+    container_name: narayancic1
+    ports:
+    - "1122:82"
+    restart: always 
+    networks: # use bridge created above 
+    - narayan111
